@@ -16,7 +16,13 @@ allocation_tablename = config.allocation_table
 treatment_field = config.treatment_field
 randomized_field = config.randomized_field
 log_filename = './logs/redcap_rand_log_' + datetime.now().strftime("%Y-%m-%d_%H-%M-%S") + '.log'
-logging.basicConfig(filename=log_filename, filemode='w', encoding='utf-8', level=logging.INFO)
+logging.basicConfig(
+    filename=log_filename,
+    filemode='w',
+    encoding='utf-8',
+    level="INFO",
+    format="%(asctime)s [%(levelname)s] %(message)s",
+)
 
 def pull_redcap_report():
     data = {
