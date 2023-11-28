@@ -189,7 +189,7 @@ Resources:
                       logging.info("Failed to read in " + allocation_tablename)
                       logging.info(e)
                       sys.exit(1)
-              print("Succesfully read in table" + allocation_tablename)
+              print("Succesfully read in table " + allocation_tablename)
               logging.info("Successfully read in table " + allocation_tablename)
               return temp_df
               
